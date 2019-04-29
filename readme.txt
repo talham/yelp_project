@@ -3,3 +3,4 @@ Techniques used include:
 - graph databases
 - bimodal networks
 - sentiment Analysis
+Analysis is conducted in Jupyter notebooks
