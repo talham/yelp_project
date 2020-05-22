@@ -1,4 +1,4 @@
-## The Yelp Dataset - A graphical Analysis
+# The Yelp Dataset - A graphical Analysis
 
 
 ### Final Project Data 620
@@ -22,7 +22,55 @@ There is information on users, such as the number of reviews, number of fans, re
  
 ![](images/users.png)
 
+> Information on Reviews:
+
+Actual text of the reviews and the user-id that created the review is also provided, along with rating provided by the reviewer. 
+
+![](images/reviews.png)
+
 #### 2. The Dataset
+
+##### 2.1 Analyzing data from the Businesses
+Initial counts of all business indicate that a significant part of the database is located in Arizona. This followed by business in Nevada and then in Ontario Canada
+As shown in the table below about 56,600 businesses are located in Arizona. 
+
+![](images/business_counts.png)
+
+The data is json format. After loading the data, we see that most businesses do not have a very high number of reviews.
+However there are some businesses that have a large number of reviews. 
+
+![](images/Business_reviews.png)
+
+
+##### 2.2 Business Data Cleaning
+
+Since the data was presented in Json format a number of attributes needed some additional processing. For example a number of 
+attributes were sublists and had to be parsed out separately. In particular each business had category classifications and a number of 
+attributes that other attributes such as the ambience of the business. After the data cleaning steps the data fields are summarized
+below:
+
+![](images/business_data.png) 
+
+
+##### 2.3 Business Data Cleaning
+
+The yelp data contains categories of businesses. Varying degrees of detail are provided and the categories (a total of 8 are retained for further analysis) are not consistent throughout. 
+For example, category 1 is typically the more detailed, "Burgers", with category 2, listed as "Restaurants". However, this not always the case and there some cases where category 1 is Restaurants and category 2 is "Restaurants".
+Below we check and confirm these:
+
+![](images/rest1.png) 
+
+![](images/rest2.png) 
+
+The final list of restuarants is determined by filtering on the eight categories referenced above, as shown in the code below:
+
+![](images/rest_filter.png) 
+
+
+As a result of the filtering, out of the aproximately **56,600** businesses in Arizona, only approximately **11,300** are restuarants or food businesses.
+
+##### 2.4 Understanding the Restuarant Data
+
 
 
 #### 7. Next Steps
