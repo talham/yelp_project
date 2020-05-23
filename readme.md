@@ -140,6 +140,14 @@ has many reviewers, and each row in the dataset represents the rating provided b
 
 #### 4.0 Conducting Social Network Analysis 
 
+Looking at some of the prolific reviewers reveals some interesting patterns. Certain restuarants as expected are extremely popular,
+and have reviews across the board from a number of the reviewers. 
+
+![](images/cliques.png)
+
+we also calculate some of the centrality metrics for the bi-modal graph after projecting it to a uni-modal graph. 
+
+![](images/between_centrality.png)
 
 #### 5. Next Steps
 
@@ -149,8 +157,4 @@ The are a number of steps that can be taken here that can further improve the an
 - Incorporating labelled image data into recommendation algorithms along with potential topic models to develop better recommendations
 
 
-### References
-1. F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4: 19:1–19:19. 
-https://doi.org/10.1145/2827872
-2. J. Leskovec, A. Rajaraman, J. Ullman: Mining of Massive Datasets, http://www.mmds.org
 
