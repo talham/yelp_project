@@ -83,10 +83,10 @@ As a results of the additional filter of considering only those restaurants that
 
 I conduct a further categorization of the number of reviews for each business. 
 
-	- Medium: Between 250 and 500 reviews
-	- High: Between 500 and 1000 reviews
-	- Very High: Greater than 1000 reviews
-	- Low: Otherwise
+- Medium: Between 250 and 500 reviews
+- High: Between 500 and 1000 reviews
+- Very High: Greater than 1000 reviews
+- Low: Otherwise
 
 As can be seen that the "very high" review category, which generally consist of the most popular restaurants has mostly postive reviews, with a star rating of 4 or more.
   
@@ -113,17 +113,40 @@ The figure below shows the distribution of the reviews by users. As can be seen 
 #### 3. Setting up the Social Network Analysis 
 
 ##### 3.1 Categorizing Regional Cusines
+In addition to understanding the relationships between reviewers and the food industry businesses, I developed categories cusineses by region. It would be interesting 
+to see what the relationship between the different types of restaurants and reviewers is. In order to do that I had to develop a standard category. As can be seen 
+in the data snap shot below the yelp restaurant data categories are not standard. 
+
+![](images/region_cat.png) 
+
+I did this through identifying first all the categories represented in the data, and concatecated to a simple list, as shown below:
+
+![](images/region_cat2.png) 
+
+Then through a visual inspection of the categories, specific list of regions was identified as can be seen below
+
+![](images/region_cat_defs.png) 
+
+Most of the businesses were assigned to a category, although not all fit neatly into a regional cuisine category. Counts of the final top 7 categories are shown below:
+
+![](images/region_cat_top5.png) 
 
 
 ##### 3.2 Developing the Final Dataset
 
+Finally, the all the reviews and the restaurants are merged together for final analysis. The final dataset consists of **1.127 million** observations split across **7364** restaurants, this is because each restaurant
+has many reviewers, and each row in the dataset represents the rating provided by reviewer / patron of the restaurant. 
 
 
-#### 7. Next Steps
+#### 4.0 Conducting Social Network Analysis 
 
-The are a number of steps that can be taken here that can further improve the recommendations generated, and this analysis is quite simple in its approach. 
-- Incorporate additional information into the similarlity calculation. Here we only use the ratings, however, we can use / consider information on movie geners and some of the tags that these movie raters have developed
-- Consider additional metrics for the ratings similarity calculation including the use of the baseline predictor
+
+#### 5. Next Steps
+
+The are a number of steps that can be taken here that can further improve the analysis further including: 
+- Topical analysis of the textual reviews; For example developing topic models to understand the different topics covered by reviews and the review ratings
+- Developing a recommendation engine using the review and user profiles to levarge ratings along with the business data
+- Incorporating labelled image data into recommendation algorithms along with potential topic models to develop better recommendations
 
 
 ### References
